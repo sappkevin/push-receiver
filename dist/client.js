@@ -365,7 +365,7 @@ class PushReceiver extends emitter_1.default {
                     // NOTE(ibash) Periodically we're unable to decrypt notifications. In
                     // all cases we've been able to receive future notifications using the
                     // same keys. So, we silently drop this notification.
-                    logger_1.default.warn('Message dropped as it could not be decrypted: ' + error.message);
+                    logger_1.default.debug('Message dropped as it could not be decrypted: ' + error.message);
                     return;
                 default:
                     throw error;
